@@ -1,6 +1,7 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import React from 'react';
 import Colors from '@/constants/Colors';
+import { Link } from 'expo-router';
 
 export default function LoginScreen() {
   return (
@@ -17,9 +18,11 @@ export default function LoginScreen() {
         <Text style={styles.subtitle}>
           Create AI magic with your favourite images
         </Text>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonLabel}>Continue</Text>
-        </TouchableOpacity>
+        <Link href={'/(tabs)/home'} asChild>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonLabel}>Continue</Text>
+          </TouchableOpacity>
+        </Link>
       </View>
     </View>
   );
